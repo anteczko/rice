@@ -29,6 +29,6 @@ sudo make install
 sudo echo "gaps inner 20" >> ~/.config/i3/config
 sudo echo "gaps outer 10" >> ~/.config/i3/config
 sudo echo "for_window [class="^.*"] border pixel 2" >> ~/.config/i3/config
-i3-msg reload
+i3-msg restart
 
-rm -rf gaps -y
+rm -rf gaps
