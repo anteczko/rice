@@ -25,3 +25,10 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
+
+sudo echo "gaps inner 20" >> ~/.config/i3/config
+sudo echo "gaps outer 10" >> ~/.config/i3/config
+sudo echo "for_window [class="^.*"] border pixel 2" >> ~/.config/i3/config
+i3-msg reload
+
+rm -rf gaps -y
