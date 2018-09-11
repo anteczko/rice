@@ -33,7 +33,7 @@ i3-msg restart
 
 rm -rf ./gaps
 sudo apt-get update -y
-////
+
 echo installed i3-gaps and reloaded
 
 sudo apt-get install apt-file libconfig-dev libxcomposite-dev libxdamage-dev libxrandr-dev libxinerama-dev libdbus-1-dev libdrm-dev libmesa-dev
@@ -48,3 +48,15 @@ sudo make install
 cd ..
 rm -rf compton/
 echo compton installed!
+////
+echo preparing to install polybar!
+
+apt-get update
+sudo apt-get install build-essential cmake libxcb libxcb-ewmh-dev python-xcbgen
+sudo apt-get install cmake cmake-data pkg-config libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
+
+git clone --branch 3.2 --recursive https://github.com/jaagr/polybar
+mkdir polybar/build
+cd polybar/build
+cmake ..
+sudo make install
