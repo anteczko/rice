@@ -31,4 +31,4 @@ sudo echo "gaps outer 10" >> ~/.config/i3/config
 sudo echo "for_window [class="^.*"] border pixel 2" >> ~/.config/i3/config
 i3-msg restart
 
-rm -rf gaps
+rm -rf ./gaps
