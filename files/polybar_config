@@ -1,3 +1,4 @@
+
 [colors]
 clear = #0
 
@@ -25,48 +26,87 @@ underline-color=${colors.red}
 border-top-size = 33%
 background = ${colors.clear}
 
-font-0 = "DejaVu Sans Mono:size=20"
+font-0 = "SCE\-PS3 Rodin LATIN:style=Regular:size=21;6"
+font-1 = "Font Awesome 5 Free Regular:style=Regular:size=21;3"
+font-2 = "Font Awesome 5 Free Solid:style=Solid:size=21;3"
 
 [bar/tabsSmall]
 width=100%
 height=2%
 modules-center=i3s
 background = ${colors.clear}
-font-0 = "DejaVu Sans Mono:size=20"
+font-0 = "SCE\-PS3 Rodin LATIN:style=Regular:size=21;6"
+font-1 = "Font Awesome 5 Free Regular:style=Regular:size=21;3"
+font-2 = "Font Awesome 5 Free Solid:style=Solid:size=21;3"
 
 
 
 [module/i3]
 type = internal/i3
+fuzzy-match = true
 format = <label-state> <label-mode>
 
-label-focuesd = %index%
-label-focused-foreground = #ffffff
+ws-icon-0 = "NETWORK;"
+ws-icon-1 = "CALENDAR;"
+ws-icon-2 = "STORAGE;"
+ws-icon-3 = "TERMINAL;"
+ws-icon-4 = "MUSICS;"
+ws-icon-5 = "DATABASE;"
+ws-icon-6 = "SYSTEM;"
+ws-icon-default = 
+
+label-focused = %{T2} %icon% %{T-}%name%
+;"%{T2} %{B#f00} %icon% %{B-} %{T-}%name%"
+label-focused-foreground = ${colors.lgrey}
 label-focused-background = ${colors.vdgrey}
-label-focused-padding = 5%
-label-focused-margin = 5%
+label-focused-padding-right = 2%
+label-focused-margin = 3%
 
 
-label-unfocuesd = %index%
+label-unfocused = %{T2} %icon% %{T-}%name%
 label-unfocused-foreground = ${colors.vdgrey}
 label-unfocused-background = ${colors.dgrey}
-label-unfocused-padding = 5%
-label-unfocused-margin = 5%
+label-unfocused-padding-right = 2%
+label-unfocused-margin = 3%
 
 
 [module/i3s]
 type = internal/i3
 format = <label-state> <label-mode>
+label-mode = %mode%
 
-label-focused="  "
-label-focused-foreground = #ffffff
+ws-icon-0 = "NETWORK;"
+ws-icon-1 = "CALENDAR;"
+ws-icon-2 = "STORAGE;"
+ws-icon-3 = "TERMINAL;"
+ws-icon-4 = "MUSICS;"
+ws-icon-5 = "DATABASE;"
+ws-icon-6 = "SYSTEM;"
+ws-icon-default = 
+
+label-focused = %{T2} %icon% %{T-}%name%
+label-focused-foreground = ${colors.vdgrey}
 label-focused-background = ${colors.vdgrey}
-label-focused-padding = 5%
-label-focused-margin = 5%
+label-focused-padding-right = 2%
+label-focused-margin = 3%
 
-label-unfocused = "  "
-label-unfocused-padding = 5%
+
+label-unfocused = %{T2} %icon% %{T-}%name%
 label-unfocused-foreground = ${colors.clear}
 label-unfocused-background = ${colors.clear}
-;${colors.red}
-label-unfocused-margin=5%
+label-unfocused-padding-right = 2%
+label-unfocused-margin = 3%
+
+[bar/phantom]
+modules-center=text
+bottom=true
+background = ${colors.clear}
+width=100%
+height=5%
+font-0 = "SCE\-PS3 Rodin LATIN:style=Regular:size=22;6
+font-1 = "Font Awesome 5 Free Regular:style=Regular:size=32;0"
+
+[module/text]
+type = custom/text
+
+content = " "
