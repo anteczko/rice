@@ -7,7 +7,16 @@ killall -q compton
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 
-compton --config ~/rice/files/compton.conf &
-polybar tabs & sleep 1 &
+#polybar tabs & sleep 1 &
+#polybar phantom &
+#polybar tabsSmall
+
+
+polybar tabs &
+while ! pidof polybar tabs >> /dev/null ;
+do
+sleep 1
+done
+polybar tabsSmall &
 polybar phantom &
-polybar tabsSmall
+compton --config ~/rice/files/compton.conf

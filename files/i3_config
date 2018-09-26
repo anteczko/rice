@@ -37,7 +37,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi_launcher.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -159,8 +160,12 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-
+exec --no-startup-id "feh --bg-scale ~/resources/final/small.png"
 
 gaps inner 70
 gaps outer -30
 for_window [class=^.*] border pixel 0
+
+bindsym $mod+m exec "rofi -show run"
+
+for_window [title="feh.*blured.jpg"] floating enable
