@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scrot shot.jpg -q 44
+scrot shot.jpg -q 66
 convert -blur 0x8 shot.jpg blured.jpg
 feh -F blured.jpg &
 #feh -F shot.jpg &

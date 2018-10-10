@@ -161,6 +161,7 @@ bindsym $mod+r mode "resize"
 #}
 
 exec --no-startup-id "feh --bg-scale ~/resources/final/small.png"
+exec --no-startup-id run.sh
 
 gaps inner 70
 gaps outer -30
@@ -169,3 +170,4 @@ for_window [class=^.*] border pixel 0
 bindsym $mod+m exec "rofi -show run"
 
 for_window [title="feh.*blured.jpg"] floating enable
+

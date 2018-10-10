@@ -26,7 +26,7 @@ underline-color=${colors.red}
 border-top-size = 33%
 background = ${colors.clear}
 
-font-0 = "SCE\-PS3 Rodin LATIN:style=Regular:size=21;6"
+font-0 = "SCE\-PS3 Rodin LATIN2:style=Light:size=21;6"
 font-1 = "Font Awesome 5 Free Regular:style=Regular:size=21;3"
 font-2 = "Font Awesome 5 Free Solid:style=Solid:size=21;3"
 
@@ -35,7 +35,7 @@ width=100%
 height=2%
 modules-center=i3s
 background = ${colors.clear}
-font-0 = "SCE\-PS3 Rodin LATIN:style=Regular:size=21;6"
+font-0 = "SCE\-PS3 Rodin LATIN2:style=Light:size=21;6"
 font-1 = "Font Awesome 5 Free Regular:style=Regular:size=21;3"
 font-2 = "Font Awesome 5 Free Solid:style=Solid:size=21;3"
 
@@ -110,3 +110,21 @@ font-1 = "Font Awesome 5 Free Regular:style=Regular:size=32;0"
 type = custom/text
 
 content = " "
+
+[bar/pattern1]
+modules-center=text
+background = ${colors.red}
+width=100%
+height=2px
+
+[bar/pattern2]
+modules-center=squares
+foreground = ${colors.dgrey}
+background = ${colors.clear}
+width=100%
+height=5%
+font-0 = "Noto Sans Avestan:style=Regular:size=22;0"
+
+[module/squares]
+type = custom/text
+content="𐬼 𐬼 𐬼 𐬼 𐬼 𐬼 "

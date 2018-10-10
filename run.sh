@@ -11,12 +11,17 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #polybar phantom &
 #polybar tabsSmall
 
-
+: '
 polybar tabs &
-while ! pidof polybar tabs >> /dev/null ;
-do
-sleep 1
-done
+sleep 2 &
 polybar tabsSmall &
 polybar phantom &
+polybar pattern1 &
 compton --config ~/rice/files/compton.conf
+'
+
+polybar tabs & sleep 2
+polybar tabsSmall & sleep2
+polybar phantom &
+compton --config ~/rice/files/compton.conf
+
