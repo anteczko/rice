@@ -1,5 +1,5 @@
 #!/bin/bash
-<< ////
+
 echo installing i3
 sudo apt-get install feh htop vim i3 autoconf xcb-xrm
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool 
@@ -60,3 +60,6 @@ mkdir polybar/build
 cd polybar/build
 cmake ..
 sudo make install
+
+sudo apt install compton
+
