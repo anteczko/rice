@@ -1,0 +1,53 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#navigator-toolbox{
+	background:transparent;
+}
+
+#navigator-toolbox > *{
+	background:#999;
+}
+
+#navigator-toolbox {
+    position: relative;
+    height: 0.1px;
+
+    overflow:hidden;
+	opacity:0;
+    margin-bottom: 200 px;
+    z-index: 1;
+}
+#navigator-toolbox:hover {
+    height: 80px;
+    margin-bottom: -80px;
+	overflow:extend;
+	opacity:1;
+}
+
+
+#content-deck{
+    position:relative;
+    z-index: 0;
+}
+
+#titlebar-buttonbox{
+	opacity:0;
+    height: 1px;
+    overflow: hidden;
+
+}
+
+#titlebar-buttonbox:hover{
+	opacity:1;
+    height: auto;
+}
+
+
+browser {
+    margin-right: -12px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+.box-inherit{
+    background-color: whitesmoke;
+}
