@@ -25,3 +25,4 @@ polybar tabsSmall & sleep2
 polybar phantom &
 compton --config ~/rice/files/compton.conf
 
+feh --bg-scale ~/rice/resources/WallpaperSmall.png
