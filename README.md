@@ -1,2 +1,2 @@
 # rice
-DEvelopment Branch
+Development branch
